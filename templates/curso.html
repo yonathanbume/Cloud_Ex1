@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block content %}
+    <h1>registro de curso!</h1>
+    <form action="{{url_for('curso')}}" method="post">
+      {{ form.hidden_tag() }}
+      {{ form.Codigo.label(class="form-label") }}
+      {{ form.Codigo(class="form-control") }}
+      <br/>
+      {{ form.Nombre.label(class="form-label") }}
+      {{ form.Nombre(class="form-control") }}
+      <br/>
+      {{ form.Credito.label(class="form-label") }}
+      {{ form.Credito(class="form-control") }}
+      <br/>
+      <input value="ingresar" type="submit" class="btn btn-success"/>
+      <button type="button" class="btn btn-danger">Mostrar</button>
+      <br/>
+  </form>
+ 
+{% endblock %}
